@@ -52,7 +52,7 @@ const validator = (num) => {
 
 const removeZeros = (numArr) => {
   let zeroCount = 0
-  for (let i = 0; i < numArr.length; i += 1) {
+  for (let i = 0; i < numArr.length -1; i += 1) {
       if (numArr[i] === '0') {
           zeroCount += 1
       } else {
@@ -118,5 +118,5 @@ const numToWord = (convertThis) => {
   return convertedWord.join(' ')
 }
 
-const inputValueHere = '999'
+const inputValueHere = '917390'
 console.log(`${inputValueHere} => ${numToWord(inputValueHere)}`)
