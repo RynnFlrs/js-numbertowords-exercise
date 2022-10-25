@@ -104,7 +104,7 @@ const numToWord = (convertThis) => {
   const convertedWord = []
 
   if (arrNum.length <= 3) {
-    converter(arrNum)
+    convertedWord.push(converter(arrNum)) // converter(arrNum)
   } else {
     const diff = 6 - arrNum.length
     if (diff > 0) {
@@ -114,9 +114,9 @@ const numToWord = (convertThis) => {
     }
     convertedWord.push(`${converter(removeZeros(arrNum.slice(0, 3)))} Thousand`)
     convertedWord.push(converter(removeZeros(arrNum.slice(3))))
-    }
+  }
   return convertedWord.join(' ')
 }
 
-const inputValueHere = '010101'
+const inputValueHere = '999'
 console.log(`${inputValueHere} => ${numToWord(inputValueHere)}`)
